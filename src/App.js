@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <h1>Home Page</h1>
+    <h1>insert routes to different pages here</h1>
   );
 }
 
