@@ -6,17 +6,21 @@ function Payment() {
     // fake payment solutions (Kwish, WISA and MasterKard)
     // VALIDATE INPUTS
 
-
-
     const [orderData, setOrderData] = useState([]);
     let getOrder = JSON.parse(localStorage.getItem("orderData"));
 
     useEffect(() => {
-
-        console.log(getOrder);
         setOrderData([...getOrder]);
-
     }, [])
+
+    const calculateTotalPrice = () => {
+        let totalPrice = 0;
+        for(let i = 0; i < orderData.length; i++) {
+            const item = orderData[i];
+            totalPrice += item.price * item.amount;
+        }
+        return totalPrice.toFixed(2);
+    }
 
     return ( 
     
@@ -29,8 +33,9 @@ function Payment() {
                         Name: {item.name} <br/>
                         Amount: {item.amount}
                     </div>
-                )
+                );
             })}
+            <div>Total Price: ${calculateTotalPrice()}</div>
         </div>}
     </div>
     );
