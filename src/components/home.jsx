@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return ( 
-        <h1>Insert logos, text, fetch data and stuff here</h1>
+        <div>
+            <h1>Insert logos, text, fetch data and stuff here</h1>
+            <Link to="/menu">Menu</Link>
+        </div>
      );
 }
 

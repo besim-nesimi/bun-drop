@@ -1,15 +1,22 @@
-import logo from './logo.svg';
-import React, {useEffect, useState} from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Menu from './components/menu';
 import './App.css';
+import Order from './components/order';
+import Payment from './components/payment';
+import Home from './components/home';
 
 function App() {
   return (
 
     // DONT FORGET TO ADD README FILE HOW-TO-USE APP
-
-
-    <h1>insert routes to different pages here</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/menu" element={<Menu />}/>
+      <Route path="/order" element={<Order />}/>
+      <Route path="/payment" element={<Payment />}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,90 +1,116 @@
 {
-  "burgers": [
+  "menu": [
     {
       "id": 1,
       "name": "Classic Burger",
-      "price": 9.99
+      "price": 9.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 2,
       "name": "Cheeseburger",
-      "price": 10.99
+      "price": 10.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 3,
       "name": "Bacon Burger",
-      "price": 11.99
+      "price": 11.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 4,
       "name": "Veggie Burger",
-      "price": 8.99
+      "price": 8.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 5,
       "name": "Spicy Chicken Burger",
-      "price": 12.99
+      "price": 12.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 6,
       "name": "Fish Burger",
-      "price": 10.99
+      "price": 10.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 7,
       "name": "Double Cheeseburger",
-      "price": 13.99
+      "price": 13.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 8,
       "name": "Black Bun Burger",
-      "price": 11.99
+      "price": 11.99,
+      "type": "burger",
+      "amount": 0
     },
     {
       "id": 9,
       "name": "Mushroom Swiss Burger",
-      "price": 10.99
-    }
-  ],
-  "fries": [
+      "price": 10.99,
+      "type": "burger",
+      "amount": 0
+    },
     {
-      "id": 1,
+      "id": 10,
       "name": "Regular Fries",
-      "price": 3.99
+      "price": 3.99,
+      "type": "sides",
+      "amount": 0
     },
     {
-      "id": 2,
+      "id": 11,
       "name": "Curly Fries",
-      "price": 4.99
-    }
-  ],
-  "milkshake": [
+      "price": 4.99,
+      "type": "sides",
+      "amount": 0
+    },
     {
-      "id": 1,
+      "id": 12,
       "name": "Chocolate Milkshake",
-      "price": 5.99
-    }
-  ],
-  "sodas": [
+      "price": 5.99,
+      "type": "drinks",
+      "amount": 0
+    },
     {
-      "id": 1,
+      "id": 13,
       "name": "Cola",
-      "price": 1.99
+      "price": 1.99,
+      "type": "drinks",
+      "amount": 0
     },
     {
-      "id": 2,
+      "id": 14,
       "name": "Lemon Lime",
-      "price": 1.99
+      "price": 1.99,
+      "type": "drinks",
+      "amount": 0
     },
     {
-      "id": 3,
+      "id": 15,
       "name": "Orange",
-      "price": 1.99
+      "price": 1.99,
+      "type": "drinks",
+      "amount": 0
     },
     {
-      "id": 4,
+      "id": 16,
       "name": "Root Beer",
-      "price": 1.99
+      "price": 1.99,
+      "type": "drinks",
+      "amount": 0
     }
   ]
 }
