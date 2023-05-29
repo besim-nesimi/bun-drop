@@ -1,0 +1,91 @@
+{
+    "burgers": [
+      {
+        "id": 1,
+        "name": "Classic Burger",
+        "price": 9.99
+      },
+      {
+        "id": 2,
+        "name": "Cheeseburger",
+        "price": 10.99
+      },
+      {
+        "id": 3,
+        "name": "Bacon Burger",
+        "price": 11.99
+      },
+      {
+        "id": 4,
+        "name": "Veggie Burger",
+        "price": 8.99
+      },
+      {
+        "id": 5,
+        "name": "Spicy Chicken Burger",
+        "price": 12.99
+      },
+      {
+        "id": 6,
+        "name": "Fish Burger",
+        "price": 10.99
+      },
+      {
+        "id": 7,
+        "name": "Double Cheeseburger",
+        "price": 13.99
+      },
+      {
+        "id": 8,
+        "name": "Black Bun Burger",
+        "price": 11.99
+      },
+      {
+        "id": 9,
+        "name": "Mushroom Swiss Burger",
+        "price": 10.99
+      }
+    ],
+    "fries": [
+      {
+        "id": 1,
+        "name": "Regular Fries",
+        "price": 3.99
+      },
+      {
+        "id": 2,
+        "name": "Curly Fries",
+        "price": 4.99
+      }
+    ],
+    "milkshake": [
+      {
+        "id": 1,
+        "name": "Chocolate Milkshake",
+        "price": 5.99
+      }
+    ],
+    "sodas": [
+      {
+        "id": 1,
+        "name": "Cola",
+        "price": 1.99
+      },
+      {
+        "id": 2,
+        "name": "Lemon Lime",
+        "price": 1.99
+      },
+      {
+        "id": 3,
+        "name": "Orange",
+        "price": 1.99
+      },
+      {
+        "id": 4,
+        "name": "Root Beer",
+        "price": 1.99
+      }
+    ]
+  }
+  
