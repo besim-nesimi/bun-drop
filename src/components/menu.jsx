@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 function Menu() {
 
+    // insert data and routes here, fetch menu (db) with pics and stuff
     const [data, setData] = useState([]);
 
     useEffect(() => {

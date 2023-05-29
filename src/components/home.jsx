@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
     return ( 
-        <h1>Insert fetch and stuff here</h1>
+        <h1>Insert logos, text, fetch data and stuff here</h1>
      );
 }
 
