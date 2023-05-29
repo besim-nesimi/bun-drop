@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import React, {useEffect, useState} from 'react';
+import Menu from './components/menu';
 import './App.css';
 
 function App() {
