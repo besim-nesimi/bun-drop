@@ -1,7 +1,10 @@
 import React from 'react';
 
 function Payment() {
-    // input forms for delivery, city, streetname and housenumber, fake payment solutions (Kwish, WISA and MasterKard)
+    // input forms for delivery, city, 
+    // streetname and housenumber, 
+    // fake payment solutions (Kwish, WISA and MasterKard)
+    // VALIDATE INPUTS
     return ( <h1>Payment</h1> );
 }
 
