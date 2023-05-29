@@ -5,6 +5,10 @@ import './App.css';
 
 function App() {
   return (
+
+    // DONT FORGET TO ADD README FILE HOW-TO-USE APP
+
+
     <h1>insert routes to different pages here</h1>
   );
 }
