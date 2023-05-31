@@ -5,112 +5,128 @@
       "name": "Classic Burger",
       "price": 9.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-1.png"
     },
     {
       "id": 2,
       "name": "Cheeseburger",
       "price": 10.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-2.png"
     },
     {
       "id": 3,
       "name": "Bacon Burger",
       "price": 11.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "/images/burger-3.png"
     },
     {
       "id": 4,
       "name": "Veggie Burger",
       "price": 8.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-4.png"
     },
     {
       "id": 5,
       "name": "Spicy Chicken Burger",
       "price": 12.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-5.png"
     },
     {
       "id": 6,
       "name": "Fish Burger",
       "price": 10.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-6.png"
     },
     {
       "id": 7,
       "name": "Double Cheeseburger",
       "price": 13.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-7.png"
     },
     {
       "id": 8,
       "name": "Black Bun Burger",
       "price": 11.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-8.png"
     },
     {
       "id": 9,
       "name": "Mushroom Swiss Burger",
       "price": 10.99,
       "type": "burger",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/burger-9.png"
     },
     {
       "id": 10,
       "name": "Regular Fries",
       "price": 3.99,
       "type": "sides",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/fries-1.png"
     },
     {
       "id": 11,
       "name": "Curly Fries",
       "price": 4.99,
       "type": "sides",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/fries-2.png"
     },
     {
       "id": 12,
       "name": "Chocolate Milkshake",
       "price": 5.99,
       "type": "drinks",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/milkshake-1.png"
     },
     {
       "id": 13,
       "name": "Cola",
       "price": 1.99,
       "type": "drinks",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/soda-1.png"
     },
     {
       "id": 14,
       "name": "Lemon Lime",
       "price": 1.99,
       "type": "drinks",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/soda-2.png"
     },
     {
       "id": 15,
       "name": "Orange",
       "price": 1.99,
       "type": "drinks",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/soda-3.png"
     },
     {
       "id": 16,
       "name": "Root Beer",
       "price": 1.99,
       "type": "drinks",
-      "amount": 0
+      "amount": 0,
+      "image": "../images/soda-4.png"
     }
   ]
 }
