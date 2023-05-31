@@ -6,6 +6,13 @@ import { Link } from 'react-router-dom';
 function Menu() {
 
     // insert data and routes here, fetch menu (db) with pics and stuff
+
+
+    // UPDATE 2023-05-31 
+    // För att se bilderna som  tillhör var och ett item, 
+    // behöver vi serialisera det till json, 
+    // och deserialisera tillbaka när vi ska använda det!
+
     const [menuData, setMenuData] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
 
@@ -21,7 +28,6 @@ function Menu() {
             width: 300,
             height: 300,
         },
-
         container: {
             display: "flex",
             flexDirection: "row",
@@ -29,20 +35,17 @@ function Menu() {
             padding: 10,
             marginBottom: 10,
         },
-
         menuSection: {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
         gridAutoRows: "1fr",
         gap: 15,
         },
-
         menuCards: {
         backgroundColor: "white",
         padding: 10,
         borderRadius: 10,
-        },
-
+        }
     }
 
     useEffect(() => {
@@ -103,13 +106,15 @@ function Menu() {
         </div>
         <div style={styles.container}>
             <div style={styles.menuSection}>
+
             {menuData.map(item => {
+                // const imageSrc = imageMap[item.image];
                 return (
                     <div key={item.id}>
                         <div style={styles.menuCards}>
                         Name: {item.name} <br/>
                         Price: {item.price} <br/>
-                        Image: <img src={item.image} style={{maxWidth: "100px"}}/> <br/>
+                        Image: <img src={require(item.image)} style={{maxWidth: "100px"}}/> <br/>
                         <button onClick={() => selectItem(item)}>+</button>
                         <button onClick={() => removeItem(item)}>-</button>
                         </div>

@@ -22,10 +22,6 @@ function Home() {
     const soda3 = require("../images/soda-3.png")
     const soda4 = require("../images/soda-4.png")
 
-
-
-    
-
     const styles = {
         main: {
             backgroundColor: "#ffcab5",
