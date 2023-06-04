@@ -105,55 +105,13 @@ function Home() {
         }
      }
 
-
-     // wtf det går att göra detta i en for loop ju?
-
-     const menuItems = {};
+    const menuItems = {};
 
      for (let i = 1; i <= 16; i++) {
         menuItems[`item${i}`] = menuData?.find(item => item.id === i);
      }
 
-     // alldeles för mycket kod
-    //  const firstItem = menuData?.find(item => item.id === 1);
-    //  const secondItem = menuData?.find(item => item.id === 2);
-    //  const thirdItem = menuData?.find(item => item.id === 3);
-    //  const fourthItem = menuData?.find(item => item.id === 4);
-    //  const fifthItem = menuData?.find(item => item.id === 5);
-    //  const sixthItem = menuData?.find(item => item.id === 6);
-    //  const seventhItem = menuData?.find(item => item.id === 7);
-    //  const eightItem = menuData?.find(item => item.id === 8);
-    //  const ninthItem = menuData?.find(item => item.id === 9);
-    //  const tenthItem = menuData?.find(item => item.id === 10);
-    //  const eleventhItem = menuData?.find(item => item.id === 11);
-    //  const twelvthItem = menuData?.find(item => item.id === 12);
-    //  const thirteenthItem = menuData?.find(item => item.id === 13);
-    //  const fourteenthItem = menuData?.find(item => item.id === 14);
-    //  const fifteenthItem = menuData?.find(item => item.id === 15);
-    //  const sixteenthItem = menuData?.find(item => item.id === 16);
-
-
-
-    // Vill ha denna men till varje "card"
-    // Just nu får jag 12 rader av "description" på varje enskilt card.
-    //      <div>
-
-                        
-    //      {menuData?.map(item => {
-    //          return (
-    //              <div key={item.id}>
-    //                  <div>
-    //                      Description: {item.description};
-    //                  </div>
-    //              </div>
-    //          )
-    //      })}
-
-    //  </div>
-
     return (
-
-
         <div className="main" style={styles.main}>
             <div style={styles.container}>
                 <div>
