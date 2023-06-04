@@ -95,8 +95,9 @@ function Menu() {
     }
 
     return ( 
-    <div style={styles.main}>
-        <div className="logo" style={styles.container}>
+
+    <div className="main" style={styles.main}>
+        <div style={styles.container}>
             <div>
             <img src={logo} styles={styles.homelogo}/>
             </div>
@@ -114,7 +115,8 @@ function Menu() {
                         <div style={styles.menuCards}>
                         Name: {item.name} <br/>
                         Price: {item.price} <br/>
-                        Image: <img src={require(item.image)} style={{maxWidth: "100px"}}/> <br/>
+                        Description: {item.description}; <br/>
+                        {/* Image: <img src={require(item.image)} style={{maxWidth: "100px"}}/> <br/> */}
                         <button onClick={() => selectItem(item)}>+</button>
                         <button onClick={() => removeItem(item)}>-</button>
                         </div>
