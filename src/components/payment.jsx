@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import DeliveryForm from './DeliveryForm';
+import PaymentForm from './PaymentForm';
 
 function Payment() {
     // input forms for payment (KWISH, WISA, MASTERKARD) / Kanske 2 komponenter?
     // Validate inputs for Payment details < Done Delivery but not Payment
-    
     // styla sidan
-
-
-    // Update 060623
-    // Vid tryckning av "Pay" knappen, sker följande error:
-    // TypeError: Cannot read properties of null (reading 'customerName')
-    // Misstänker att jag behöver i själva DeliveryForm komponenten lägga till en Payment komponent
-    // Som tar emot samtliga inputs vid klickandet av "submit" 
 
     const [orderData, setOrderData] = useState([]);
     let getOrder = JSON.parse(localStorage.getItem("orderData"));
@@ -57,6 +50,11 @@ function Payment() {
         homelogo: {
             width: 300,
             height: 300,
+        },
+        payBtn: {
+            width: 150,
+            height: 60,
+            borderRadius: 5,
         }
     }
 
@@ -69,11 +67,11 @@ function Payment() {
             </div>
         </div>
         <div style={styles.sbContainer}>
-            <div>
+            <div style={styles.container}>
                 <DeliveryForm />
             </div>
-            <div>
-                Lägg till Betalningsmetod här
+            <div style={styles.container}>
+                <PaymentForm />
             </div>
         </div>
         <div style={styles.container}>
@@ -93,7 +91,9 @@ function Payment() {
             </div>}
         </div>
         <div style={styles.container}>
-            <Link to="/order"><button>Pay</button></Link>
+            <Link to="/order">
+                <button style={styles.payBtn}>Pay</button>
+            </Link>
         </div>
     </div>
     );

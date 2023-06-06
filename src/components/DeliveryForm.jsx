@@ -47,6 +47,7 @@ function DeliveryForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
+            // eslint-disable-next-line no-undef
             localStorage.setItem("customerDetails", JSON.stringify(formData));
 
             // Resetta formuläret
