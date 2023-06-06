@@ -79,106 +79,194 @@ function PaymentForm() {
 
     const styles = {
         inputStyle: {
-            width: "200px"
+            display: "flex",
+            justifyContent: "center",
+            width: "200px",
+            margin: 10,
         },
         lblStyle: {
-            
+            width: "150px"
+        },
+        card: {
+            background: "#78aafa",
+            borderRadius: 15,
+            padding: 10,
+        },
+        innerCard: {
+            background: "white",
+            borderRadius: 15,
+            padding: 10,
+            marginBottom: 10,
+            display: "flex",
+            justifyContent: "center",
+        },
+        spaceBtw: {
+            display: "flex",
+            justifyContent: "space-between",
+        },
+        paymentCard: {
+            background: "white",
+            borderRadius: 10,
+            padding: 1,
+            marginBottom: 10,
+            marginLeft: 5,
+            marginRight: 5,
+            display: "flex",
+            justifyContent: "center",
+        },
+        center: {
+            display: "flex",
+            justifyContent: "center",
+        },
+        error: {
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: 10,
+            color: "red",
+            borderRadius: 10,
+            padding: 6,
         }
         
     }
     
     return ( 
-    <div>
+    <div style={styles.card}>
+        <div style={styles.innerCard}>
         <h2>Payment Method</h2>
-        <div>
-            <label><input 
-            type="radio"
-            value="card"
-            checked={paymentMethod === "card"}
-            onChange={handlePaymentMethodChange}
-            />
-            Card
-            </label>
-            <label>
-                <input 
-                type="radio" 
-                value="kwish"
-                checked={paymentMethod === "kwish"}
-                onChange={handlePaymentMethodChange}
-                />
-                Kwish
-            </label>
+        </div>
+        <div style={styles.innerCard}>
+            <div>
+                <div style={styles.spaceBtw}>
+                        <label>
+                            <input 
+                            type="radio"
+                            value="card"
+                            checked={paymentMethod === "card"}
+                            onChange={handlePaymentMethodChange}
+                            />
+                            Card
+                        </label>
+                    <div>
+                        <label>
+                            <input 
+                            type="radio" 
+                            value="kwish"
+                            checked={paymentMethod === "kwish"}
+                            onChange={handlePaymentMethodChange}
+                            />
+                            Kwish
+                    </label>
+                    </div>
+                </div>
+            </div>
         </div>
 
         {paymentMethod === "card" && (
             <div>
+                <div style={styles.paymentCard}>
                 <h2>Card Payment</h2>
+                </div>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div style={styles.spaceBtw}>
+                    <div style={styles.paymentCard}>
                         <label>
+                            <div style={styles.center}>
                             Card Number:
+                            </div>
                             <input 
                             type="text"
                             value={cardNumber}
+                            placeholder='1111 2222 3333 4444'
                             onChange={(e) => setCardNumber(e.target.value)}
                             style={styles.inputStyle}
                             />
                         </label>
-                        {formErrors.cardNumber && (
-                            <div>{formErrors.cardNumber}</div>
-                        )}
                     </div>
-                    <div>
+                    <div style={styles.paymentCard}>
                         <label>
+                            <div style={styles.center}>
                             CVV: 
-                            <input 
+                            </div>
+                            <input
                             type="text" 
                             value={cvv}
+                            placeholder='123'
                             onChange={(e) => setCVV(e.target.value)}
                             style={styles.inputStyle}
                             />
                         </label>
+                    </div>
+                    <div style={styles.paymentCard}>
+                        <label>
+                        <div style={styles.center}>
+                            Card Holder Name: 
+                            </div>
+                            <input 
+                            type="text" 
+                            value={cardHolderName}
+                            placeholder='John Atkins'
+                            onChange={(e) => setCardHolderName(e.target.value)}
+                            style={styles.inputStyle}
+                            />
+                        </label>
+                    </div>
+                    </div>
+                    <div style={styles.error}>
+                        {formErrors.cardNumber && (
+                            <div>{formErrors.cardNumber}</div>
+                        )}
+                    </div>
+                    <div style={styles.error}>
                         {formErrors.cvv && (
                             <div>{formErrors.cvv}</div>
                         )}
                     </div>
-                    <div>
-                        <label>
-                            Card Holder Name:
-                            <input 
-                            type="text" 
-                            value={cardHolderName}
-                            onChange={(e) => setCardHolderName(e.target.value)}
-                            />
-                        </label>
+                    <div style={styles.error}>
                         {formErrors.cardHolderName && (
                             <div>{formErrors.cardHolderName}</div>
                         )}
                     </div>
-                    <button type="submit">Submit</button>
+                    <div style={styles.center}>
+                        <button type="submit">Submit</button>
+                    </div>
+
                 </form>
             </div>
         )}
 
         {paymentMethod === "kwish" && (
             <div>
+                <div style={styles.paymentCard}>
                 <h2>Kwish Payment</h2>
+                </div>
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>Phone Number: 
+                    <div style={styles.spaceBtw}>
+                    <div style={styles.paymentCard}>
+                        <label>
+                            <div style={styles.center}>
+                            Phone Number:
+                            </div>
                             <input 
                             type="text" 
                             value={phoneNumber}
+                            placeholder='0701234567'
                             onChange={(e) => setPhoneNumber(e.target.value)}
+                            style={styles.inputStyle}
                             />
                         </label>
+                    </div>
+                    </div>
+                    <div style={styles.error}>
                         {formErrors.phoneNumber && (
                             <div>{formErrors.phoneNumber}</div>
                         )}
                     </div>
+                    <div style={styles.center}>
                     <button type="submit">Submit</button>
+                    </div>
                 </form>
             </div>
+            
         )}
     </div> );
 }
