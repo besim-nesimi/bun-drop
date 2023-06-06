@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Payment() {
     // input forms for delivery, city, 
     // streetname and housenumber, 
     // fake payment solutions (Kwish, WISA and MasterKard)
-    // VALIDATE INPUTS
+    // VALIDATE INPUTS - Delivery Details & Payment Details
 
     const [orderData, setOrderData] = useState([]);
     let getOrder = JSON.parse(localStorage.getItem("orderData"));
@@ -25,6 +26,7 @@ function Payment() {
     return ( 
     
     <div>
+        <div>
         <h1>Payment Site</h1>
         {orderData.length > 0 && <div>
         {orderData.map(item => {
@@ -37,6 +39,10 @@ function Payment() {
             })}
             <div>Total Price: ${calculateTotalPrice()}</div>
         </div>}
+        <div>
+            <Link to="/order"><button>Pay</button></Link>
+        </div>
+        </div>
     </div>
     );
 }
