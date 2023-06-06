@@ -88,7 +88,7 @@ function PaymentForm() {
             width: "150px"
         },
         card: {
-            background: "#78aafa",
+            background: "#ffcab5",
             borderRadius: 15,
             padding: 10,
         },

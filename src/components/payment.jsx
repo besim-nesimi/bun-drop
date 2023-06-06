@@ -29,9 +29,15 @@ function Payment() {
 
     const styles = {
         main: {
-            backgroundColor: "#ffcab5",
+            backgroundColor: "#78aafa",
             width: "100%",
             height: "100%",
+        },
+        card: {
+            backgroundColor: "white",
+            margin: 10,
+            padding: 10,
+            borderRadius: 5,
         },
         container: {
             display: "flex",
@@ -55,6 +61,17 @@ function Payment() {
             width: 150,
             height: 60,
             borderRadius: 5,
+        },
+        priceCard: {
+            backgroundColor: "white",
+            margin: 10,
+            padding: 10,
+            borderRadius: 5,
+            display: "flex",
+            justifyContent: "center",
+        },
+        totalCard: {
+            backgroundColor: "#ffcab5"
         }
     }
 
@@ -74,18 +91,19 @@ function Payment() {
                 <PaymentForm />
             </div>
         </div>
+        <div style={styles.totalCard}>
         <div style={styles.container}>
             {orderData.length > 0 && 
             <div>
             {orderData.map(item => {
                 return (
-                    <div key={`${item.id} - ${item.name}`}>
-                    Name: {item.name} <br/>
+                    <div style={styles.card} key={`${item.id} - ${item.name}`}>
+                    "{item.name}" <br/>
                     Amount: {item.amount}
                 </div>
                 );
             })}
-            <div>
+            <div style={styles.priceCard}>
                 Total Price: ${calculateTotalPrice()}
             </div>
             </div>}
@@ -94,6 +112,7 @@ function Payment() {
             <Link to="/order">
                 <button style={styles.payBtn}>Pay</button>
             </Link>
+        </div>
         </div>
     </div>
     );

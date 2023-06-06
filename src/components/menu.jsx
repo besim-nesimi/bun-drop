@@ -20,7 +20,7 @@ function Menu() {
 
     const styles = {
         main: {
-            backgroundColor: "#ffcab5",
+            backgroundColor: "#78aafa",
             width: "100%",
             height: "100%",
         },
@@ -45,6 +45,14 @@ function Menu() {
             backgroundColor: "white",
             padding: 10,
             borderRadius: 10,
+        },
+        bottomHalf: {
+            backgroundColor: "#ffcab5",
+        },
+        payBtn: {
+            width: 120,
+            height: 60,
+            borderRadius: 5,
         }
     }
 
@@ -105,7 +113,11 @@ function Menu() {
         <div style={styles.container}>
             <h1>Bun Drop Menu</h1>
         </div>
+        <div style={styles.bottomHalf}>
+
+        
         <div style={styles.container}>
+            <div>
             <div style={styles.menuSection}>
 
             {menuData.map(item => {
@@ -114,7 +126,7 @@ function Menu() {
                     <div key={item.id}>
                         <div style={styles.menuCards}>
                         Name: {item.name} <br/>
-                        Price: {item.price} <br/>
+                        Price: ${item.price} <br/>
                         Description: {item.description} <br/>
                         {/* Image: <img src={require(item.image)} style={{maxWidth: "100px"}}/> <br/> */}
                         <button onClick={() => selectItem(item)}>+</button>
@@ -124,6 +136,7 @@ function Menu() {
                 )
             })}
             </div>
+        </div>
         </div>
         <div style={styles.container}>
             <div style={styles.menuCards}>
@@ -142,7 +155,8 @@ function Menu() {
             </div>
         </div>
         <div style={styles.container}>
-            <Link to="/payment"><button onClick={handlePayment} disabled={selectedItems.length < 1}>Go to Payment</button></Link>
+            <Link to="/payment"><button style={styles.payBtn} onClick={handlePayment} disabled={selectedItems.length < 1}>Go to Payment</button></Link>
+        </div>
         </div>
     </div> );
 }

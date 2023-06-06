@@ -36,7 +36,7 @@ function Home() {
 
     const styles = {
         main: {
-            backgroundColor: "#ffcab5",
+            backgroundColor: "#78aafa",
             width: "100%",
             height: "100%",
         },
@@ -105,6 +105,10 @@ function Home() {
             display: "flex",
             justifyContent: "center",
             marginBottom: 10
+        },
+        bottomHalf: {
+            backgroundColor: "#ffcab5",
+            padding: 20,
         }
      }
 
@@ -130,6 +134,7 @@ function Home() {
             <div style={styles.container}>
             <Link to="/menu"><button style={styles.menubtn}>DROP THE MENU</button></Link>
             </div>
+            <div style={styles.bottomHalf}>
             <div style={styles.picSection}>
                 <div style={styles.picCards}>
                     <div style={styles.container}>
@@ -355,6 +360,7 @@ function Home() {
                             }
                     </div>
                 </div>
+            </div>
             </div>
         </div>
      );
