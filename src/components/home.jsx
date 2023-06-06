@@ -102,6 +102,9 @@ function Home() {
         },
         info: {
             fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: 10
         }
      }
 
@@ -135,7 +138,7 @@ function Home() {
                     <div >
                             {
                             menuItems.item1 && (
-                                <div key={menuItems.item1.id} >
+                                <div key={menuItems.item1.id} style={styles.info}>
                                     {menuItems.item1.description}
                                 </div>
                                 )
@@ -149,7 +152,7 @@ function Home() {
                     <div >
                             {
                             menuItems.item2 && (
-                                <div key={menuItems.item2.id} >
+                                <div key={menuItems.item2.id} style={styles.info} >
                                     {menuItems.item2.description}
                                 </div>
                                 )
@@ -157,13 +160,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.burger3} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item3 && (
-                                <div key={menuItems.item3.id} >
+                                <div key={menuItems.item3.id} style={styles.info} >
                                     {menuItems.item3.description}
                                 </div>
                                 )
@@ -171,13 +174,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.burger4} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item4 && (
-                                <div key={menuItems.item4.id} >
+                                <div key={menuItems.item4.id} style={styles.info} >
                                     {menuItems.item4.description}
                                 </div>
                                 )
@@ -185,13 +188,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.burger5} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item5 && (
-                                <div key={menuItems.item5.id} >
+                                <div key={menuItems.item5.id} style={styles.info} >
                                     {menuItems.item5.description}
                                 </div>
                                 )
@@ -199,13 +202,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.burger6} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item6 && (
-                                <div key={menuItems.item6.id} >
+                                <div key={menuItems.item6.id} style={styles.info}>
                                     {menuItems.item6.description}
                                 </div>
                                 )
@@ -213,13 +216,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.burger7} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item7 && (
-                                <div key={menuItems.item7.id} >
+                                <div key={menuItems.item7.id} style={styles.info}>
                                     {menuItems.item7.description}
                                 </div>
                                 )
@@ -227,13 +230,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.burger8} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item8 && (
-                                <div key={menuItems.item8.id} >
+                                <div key={menuItems.item8.id} style={styles.info}>
                                     {menuItems.item8.description}
                                 </div>
                                 )
@@ -241,13 +244,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.burger9} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item9 && (
-                                <div key={menuItems.item9.id} >
+                                <div key={menuItems.item9.id} style={styles.info}>
                                     {menuItems.item9.description}
                                 </div>
                                 )
@@ -255,13 +258,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.fries1} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item10 && (
-                                <div key={menuItems.item10.id} >
+                                <div key={menuItems.item10.id} style={styles.info}>
                                     {menuItems.item10.description}
                                 </div>
                                 )
@@ -269,13 +272,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.fries2} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item11 && (
-                                <div key={menuItems.item11.id} >
+                                <div key={menuItems.item11.id} style={styles.info}>
                                     {menuItems.item11.description}
                                 </div>
                                 )
@@ -283,13 +286,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.milkshake} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item12 && (
-                                <div key={menuItems.item12.id} >
+                                <div key={menuItems.item12.id} style={styles.info}>
                                     {menuItems.item12.description}
                                 </div>
                                 )
@@ -297,13 +300,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.soda1} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item13 && (
-                                <div key={menuItems.item13.id} >
+                                <div key={menuItems.item13.id} style={styles.info}>
                                     {menuItems.item13.description}
                                 </div>
                                 )
@@ -311,13 +314,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.soda2} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item14 && (
-                                <div key={menuItems.item14.id} >
+                                <div key={menuItems.item14.id} style={styles.info}>
                                     {menuItems.item14.description}
                                 </div>
                                 )
@@ -325,13 +328,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.soda3} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item15 && (
-                                <div key={menuItems.item15.id} >
+                                <div key={menuItems.item15.id} style={styles.info}>
                                     {menuItems.item15.description}
                                 </div>
                                 )
@@ -339,13 +342,13 @@ function Home() {
                     </div>
                 </div>
                 <div style={styles.picCards}>
-                    <div styles={styles.container}>
+                    <div style={styles.container}>
                         <img src={images.soda4} style={styles.foodPics} />
                     </div>
                     <div >
                             {
                             menuItems.item16 && (
-                                <div key={menuItems.item16.id} >
+                                <div key={menuItems.item16.id} style={styles.info}>
                                     {menuItems.item16.description}
                                 </div>
                                 )

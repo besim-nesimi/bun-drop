@@ -36,15 +36,15 @@ function Menu() {
             marginBottom: 10,
         },
         menuSection: {
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gridAutoRows: "1fr",
-        gap: 15,
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gridAutoRows: "1fr",
+            gap: 15,
         },
         menuCards: {
-        backgroundColor: "white",
-        padding: 10,
-        borderRadius: 10,
+            backgroundColor: "white",
+            padding: 10,
+            borderRadius: 10,
         }
     }
 
@@ -99,7 +99,7 @@ function Menu() {
     <div className="main" style={styles.main}>
         <div style={styles.container}>
             <div>
-            <img src={logo} styles={styles.homelogo}/>
+            <img src={logo} style={styles.homelogo}/>
             </div>
         </div>
         <div style={styles.container}>
@@ -115,7 +115,7 @@ function Menu() {
                         <div style={styles.menuCards}>
                         Name: {item.name} <br/>
                         Price: {item.price} <br/>
-                        Description: {item.description}; <br/>
+                        Description: {item.description} <br/>
                         {/* Image: <img src={require(item.image)} style={{maxWidth: "100px"}}/> <br/> */}
                         <button onClick={() => selectItem(item)}>+</button>
                         <button onClick={() => removeItem(item)}>-</button>
