@@ -12,7 +12,6 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
         phoneNumber: "",
     })
 
-    const [isDeliveryFormSubmitted, setDeliveryFormSubmitted] = useState(false)
 
     const [formErrors, setFormErrors] = useState({
         customerName: "",

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-function PaymentForm(setPaymentFormSubmitted) {
+function PaymentForm({setPaymentFormSubmitted}) {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [cvv, setCVV] = useState("");
   const [cardHolderName, setCardHolderName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [formErrors, setFormErrors] = useState({});
-  const [isPaymentFormSubmitted, setPaymentFormSubmitted] = useState(false);
 
   const handlePaymentMethodChange = (event) => {
     setPaymentMethod(event.target.value);
