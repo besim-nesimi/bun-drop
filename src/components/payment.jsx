@@ -9,6 +9,9 @@ function Payment() {
     // styla sidan
 
     const [orderData, setOrderData] = useState([]);
+    const [isPaymentFormSubmitted, setPaymentFormSubmitted] = useState(false);
+    const [isDeliveryFormSubmitted, setDeliveryFormSubmitted] = useState(false);
+
     let getOrder = JSON.parse(localStorage.getItem("orderData"));
 
     useEffect(() => {
@@ -85,10 +88,13 @@ function Payment() {
         </div>
         <div style={styles.sbContainer}>
             <div style={styles.container}>
-                <DeliveryForm />
+                <DeliveryForm 
+                setDeliveryFormSubmitted={setDeliveryFormSubmitted}/>
             </div>
             <div style={styles.container}>
-                <PaymentForm />
+                <PaymentForm 
+                setPaymentFormSubmitted={setPaymentFormSubmitted}
+                />
             </div>
         </div>
         <div style={styles.totalCard}>
@@ -110,7 +116,7 @@ function Payment() {
         </div>
         <div style={styles.container}>
             <Link to="/order">
-                <button style={styles.payBtn}>Pay</button>
+                <button disabled={!isPaymentFormSubmitted || !isDeliveryFormSubmitted} style={styles.payBtn}>Pay</button>
             </Link>
         </div>
         </div>

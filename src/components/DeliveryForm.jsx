@@ -12,6 +12,8 @@ function DeliveryForm() {
         phoneNumber: "",
     })
 
+    const [isDeliveryFormSubmitted, setDeliveryFormSubmitted] = useState(false)
+
     const [formErrors, setFormErrors] = useState({
         customerName: "",
         streetAddress: "",
@@ -27,7 +29,7 @@ function DeliveryForm() {
 
         for (const field in formData) {
             if(formData[field].trim() === "") {
-                errors[field] = `${field} is required.`
+                errors[field] = "* Required"
                 valid = false;
             }
         }
@@ -47,8 +49,9 @@ function DeliveryForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            // eslint-disable-next-line no-undef
             localStorage.setItem("customerDetails", JSON.stringify(formData));
+            console.log("Your informations have been saved.")
+            setDeliveryFormSubmitted(true);
 
             // Resetta formuläret
             setFormData({
@@ -59,7 +62,20 @@ function DeliveryForm() {
                 zipCode: "",
                 phoneNumber: "",
             });
+
+            
         }
+
+        setFormData({
+            customerName: "",
+            streetAddress: "",
+            streetNumber: "",
+            city: "",
+            zipCode: "",
+            phoneNumber: "",
+        });
+
+        
     };
 
     const styles = {
