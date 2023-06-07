@@ -15,7 +15,7 @@
       "price": 10.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-2.png",
+      "image": "/images/burger-2.png",
       "description": "This black bun burger is an exotic piece of bun-drop heaven! You won't be able to stop talking about it!"
     },
     {
@@ -24,7 +24,7 @@
       "price": 11.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-3.png",
+      "image": "/images/burger-3.png",
       "description": "This double-patty Cheeseburger is our signature burgers big brother. He's twice the size, naturally, more meat more treat!"
     },
     {
@@ -33,7 +33,7 @@
       "price": 13.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-4.png",
+      "image": "/images/burger-4.png",
       "description": "This burger is all about smashing through to your flavour palette, signed Bun-Drop!"
     },
     {
@@ -42,7 +42,7 @@
       "price": 11.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-5.png",
+      "image": "/images/burger-5.png",
       "description": "The cousin of the single patty and double Cheeseburger. The cousin who likes to have all of it! A.K.A Fat Cheesy Burger"
     },
     {
@@ -51,7 +51,7 @@
       "price": 12.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-6.png",
+      "image": "/images/burger-6.png",
       "description": "You get to taste this burger and feel yourself become a bit more gentle, nicer and humbler. The Noble Burger."
     },
     {
@@ -60,7 +60,7 @@
       "price": 13.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-7.png",
+      "image": "/images/burger-7.png",
       "description": "Onions are great. They're even greater when you take the signature burger and put them together. The Big Onion Burger."
     },
     {
@@ -69,7 +69,7 @@
       "price": 11.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-8.png",
+      "image": "/images/burger-8.png",
       "description": "All time favourite of those summer days by the BBQ. We at Bun-drop give you the Big BBQ Cheeseburger!"
     },
     {
@@ -78,7 +78,7 @@
       "price": 14.99,
       "type": "burger",
       "amount": 0,
-      "image": "./src/images/burger-9.png",
+      "image": "/images/burger-9.png",
       "description": "Well there's not much else to say other than that this Cheeseburger went four times around the world to become... The Quadrouple Cheese with Burger!"
     },
     {
@@ -87,7 +87,7 @@
       "price": 3.99,
       "type": "sides",
       "amount": 0,
-      "image": "./src/images/fries-1.png",
+      "image": "/images/fries-1.png",
       "description": "Fries. Imagination ended right here. But do we need to imagine anything? Fries are Fries, which is nice. Nice Fries."
     },
     {
@@ -96,7 +96,7 @@
       "price": 4.99,
       "type": "sides",
       "amount": 0,
-      "image": "./src/images/fries-2.png",
+      "image": "/images/fries-2.png",
       "description": "Sweet onion fries. The fancier fries. The sweeter ones. Or are they?"
     },
     {
@@ -105,7 +105,7 @@
       "price": 5.99,
       "type": "drinks",
       "amount": 0,
-      "image": "./src/images/milkshake-1.png",
+      "image": "/images/milkshake-1.png",
       "description": "About 3000 reasons to have one of these. One of them is that its approximately 3000 calories in it. Oreo Chocolate Milkshake innit."
     },
     {
@@ -114,7 +114,7 @@
       "price": 2.99,
       "type": "drinks",
       "amount": 0,
-      "image": "./src/images/soda-1.png",
+      "image": "/images/soda-1.png",
       "description": "Early bird gets the worm they say, well, here at Bun-Drop we say cheers."
     },
     {
@@ -123,7 +123,7 @@
       "price": 1.99,
       "type": "drinks",
       "amount": 0,
-      "image": "./src/images/soda-2.png",
+      "image": "/images/soda-2.png",
       "description": "Strawberry Vanilla Soda? Delicious."
     },
     {
@@ -132,7 +132,7 @@
       "price": 1.99,
       "type": "drinks",
       "amount": 0,
-      "image": "./src/images/soda-3.png",
+      "image": "/images/soda-3.png",
       "description": "Never gonna make you cry, Never gonna say goodbye, never gonna tell a lie and hurt you. Alright its Lemon Water but its fizzy."
     },
     {
