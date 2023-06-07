@@ -1,13 +1,7 @@
 Hello,
 
-Thank you for downloading my web app school project, "Bun Drop."
-
-Acknowledgments - Very Importante!
-
-I would like to express my sincere gratitude to my teacher, Albin Karlsson, for his exceptional teachings and unwavering support throughout this and other projects. Albin's unique teaching style, infused with references to popular themes such as Lord of the Rings, Star Wars, Harry Potter, and Pokemon, has made our learning journey incredibly enjoyable and engaging. His sense of humor and creative approach have not only made complex concepts easier to grasp but also sparked our curiosity and passion for programming. I am truly grateful for the opportunity to learn from such an exceptional educator. Thank you, Albin, for making this journey memorable and inspiring!
-
 ---------------------------------------------------
-Now, over to the README to be able to run this app.
+README to be able to run this app.
 
 In order to successfully download and start the project, you are required to have Node.js installed on your computer.
 
@@ -58,7 +52,7 @@ You will see a time interval indicating how long until you receive your order. Y
 
 Click the "Back to Home" button to return to the landing page.
 
-Enjoy! :)
+Enjoy!
 
 ------------
 Project Aim:
@@ -66,6 +60,11 @@ Project Aim:
 This project involves developing a complete web app using React, one of the popular JavaScript frameworks. Additionally, a mobile and desktop design created in Figma will be delivered. The project covers various learning objectives, including understanding syntax and terminology, utilizing tools and methods for interface production, developing interfaces for different environments using HTML, CSS, and JavaScript, creating interfaces with HTML, CSS, and JavaScript, building web applications with frameworks, selecting a framework (React in this case), developing applications for various devices, formulating and solving problems, and evaluating and adapting applications. The project provides comprehensive exploration of front-end development concepts and skills, allowing students to gain practical experience in building functional and responsive web applications.
 
 Please feel free to reach out if you have any questions or need further assistance.
+
+-----------
+Acknowledgments - Very Importante!
+
+I would like to express my sincere gratitude to our teacher, Albin Karlsson, for his exceptional teachings and unwavering support throughout this and other projects. Albin's unique teaching style, infused with references to popular themes such as Lord of the Rings, Star Wars, Harry Potter, and Pokemon, has made our learning journey incredibly enjoyable and engaging. His sense of humor and creative approach have not only made complex concepts easier to grasp but also sparked our curiosity and passion for programming. I am truly grateful for the opportunity to learn from such an exceptional educator. Thank you, Albin, for making this journey memorable and inspiring!
 
 Best regards,
 Besim Nesimi
