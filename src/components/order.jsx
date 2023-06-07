@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Order() {
-    // fetch that specific order which user paid for, display here,
-
     // Customer details from previous page
+    // Order details from previous page
     const [customerDetails, setCostumerDetails] = useState(null);
     const [orderData, setOrderData] = useState([]);
 
+    // Get the details(order & customer) using localStorage & useEffect hook.
     useEffect(() => {
         const storedCustomerDetails = JSON.parse(localStorage.getItem("customerDetails"));
         setCostumerDetails(storedCustomerDetails);
@@ -19,9 +20,9 @@ function Order() {
 
 
     // Problemet med nedan är att varje gång sidan uppdateras blir det nya siffror
-    // Kanske spara time som en ny variabel och displaya bara den variabeln?
+    // Kanske spara som en ny variabel och displaya bara den variabeln?
     // Blir samma "bug" men att det blir med +1 såklart :D
-    // Ingen lovande idé
+    // Ingen lovande idé men får duga.
     function generateRandomTime() {
         const random = Math.random();
 
@@ -102,11 +103,14 @@ function Order() {
         borderBottom: "1px solid red",
         paddingBottom: 5,
         marginBottom: 5,
-      }
+      },
+      homeBtn: {
+        width: 120,
+        height: 60,
+        borderRadius: 5,
+      },
     };
 
-    // Some random "thank you for bun-dropping a meal or whatever"
-    // STYLE
 
 
 
@@ -151,6 +155,9 @@ function Order() {
                     ))}
                   </div>)}
                 </div>
+                <div style={styles.center}>
+                <Link to="/"><button style={styles.homeBtn}>Back To Home</button></Link>
+              </div>
               </div>
             </div>
           </div>

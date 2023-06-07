@@ -8,6 +8,7 @@ import Home from './components/home';
 function App() {
   return (
 
+    // BrowserRouter - Routing - Setting the first page <Home /> as "/" - Now when we npm start the program, it will open at "/" which is Home component.
     // DONT FORGET TO ADD README FILE HOW-TO-USE APP
     <BrowserRouter>
     <Routes>

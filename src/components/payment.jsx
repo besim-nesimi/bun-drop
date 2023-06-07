@@ -4,20 +4,22 @@ import DeliveryForm from './DeliveryForm';
 import PaymentForm from './PaymentForm';
 
 function Payment() {
-    // input forms for payment (KWISH, WISA, MASTERKARD) / Kanske 2 komponenter?
-    // Validate inputs for Payment details < Done Delivery but not Payment
-    // styla sidan
 
+    // Setting up to recieve order details from menu page.
+    // Setting up to validate that both DeliveryForm and PaymentForm have been submitted.
     const [orderData, setOrderData] = useState([]);
     const [isPaymentFormSubmitted, setPaymentFormSubmitted] = useState(false);
     const [isDeliveryFormSubmitted, setDeliveryFormSubmitted] = useState(false);
 
+    // Get the order details from menu page.
     let getOrder = JSON.parse(localStorage.getItem("orderData"));
 
+    // useEffect hook to setOrderData and be able to access it.
     useEffect(() => {
         setOrderData([...getOrder]);
     }, [])
 
+    // Calculate total basket price (order from previous page)
     const calculateTotalPrice = () => {
         let totalPrice = 0;
         for(let i = 0; i < orderData.length; i++) {
@@ -27,16 +29,16 @@ function Payment() {
         return totalPrice.toFixed(2);
     }
 
+    // Move the order which has been selected by customer to localStorage in order
+    // to pass it through to order page / confirmation page.
     const handlePay = () => {
         localStorage.setItem("orderData", JSON.stringify(orderData))
     };
 
-    // Set new order data to send with localstorage over to payment
-    // Validate inputs in PaymentForm & DeliveryForm in order to press Pay and handleSubmit
-
     const logo = require("../images/logo-black.png")
 
 
+    // Styles...
     const styles = {
         main: {
             backgroundColor: "#78aafa",

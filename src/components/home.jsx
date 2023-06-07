@@ -5,15 +5,17 @@ import GetMenu from '../utils/fetch-json';
 
 function Home() {
 
+    // Setting up fetch menu data from db.json. 
     const [menuData, setMenuData] = useState([]);
 
+    // Using the GetMenu function which "...have only one purpose, to destroy the world of men." - Aragorn
+    // Jokes aside, its only purpose is to fetch the menu data from db.json and using the useEffect hook to set the menu data.
     useEffect(() => {
         GetMenu().then((data) => {setMenuData(data)});
     }, [])
 
 
-    // images, men kanske finnns något bättre sätt?
-
+    // Saved all images in a constant
     const images = {
         logo: require("../images/logo-black.png"),
         burger1: require("../images/burger-1.png"),
@@ -34,7 +36,17 @@ function Home() {
         soda4: require("../images/soda-4.png")
     }
 
-    const styles = {
+    // Creating an object for the menuData to store in.
+    const menuItems = {};
+
+    // For loop, finding the items by id (knowing beforehand that they range from id 1 to 16) and adding them to the menuItems object.
+    // Maybe not the best way but why fix when not broken?
+     for (let i = 1; i <= 16; i++) {
+        menuItems[`item${i}`] = menuData?.find(item => item.id === i);
+     }
+
+     // Styles...
+     const styles = {
         main: {
             backgroundColor: "#78aafa",
             width: "100%",
@@ -110,12 +122,6 @@ function Home() {
             backgroundColor: "#ffcab5",
             padding: 20,
         }
-     }
-
-    const menuItems = {};
-
-     for (let i = 1; i <= 16; i++) {
-        menuItems[`item${i}`] = menuData?.find(item => item.id === i);
      }
 
     return (

@@ -24,10 +24,12 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
 
     const [isDetailsSaved, setDetailsSaved] = useState(false);
 
+    // If statements to validate any value user inserts into fields
     const validateForm = () => {
         let valid = true;
         const errors = {};
 
+        // RegEx in order to make ZipCode and PhoneNumber only accept 5 or 10 digits respectively.
         const zipCodePattern = /^\d{5}$/;
         const phoneNumberPattern = /^\d{10}$/;
 
@@ -41,7 +43,7 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
 
         if(formData.streetAddress.trim() === "") {
           errors.streetAddress = "* Required";
-          valid = false;
+          valid = false; // RegEx used again in order to make sure its only text.
         } else if(formData.streetAddress.trim().length > 24 || !/^[a-öA-Ö\s]+$/.test(formData.streetAddress.trim())) {
           errors.streetAddress = "* Maximum 24 characters (letters, no numbers)";
           valid = false;
@@ -81,6 +83,7 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
           errors.phoneNumber = "* Invalid Phone Number";
         }
 
+        // Not needed anymore.
         // for (const field in formData) {
         //     if(formData[field].trim() === "") {
         //         errors[field] = "* Required"
@@ -92,6 +95,9 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
         return valid;
     };
 
+    // Responsible for capturing changes in the input fields of the form
+    // and updating the corresponding values in the form data state object.
+    // It makes sure that the form data state stays up to date with the user's input.
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         setFormData((prevFormData) => ({
@@ -100,6 +106,8 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
         }));
     }
 
+    // If the validation passes as true, then we set the customer details into localStorage to pass over
+    // also we make sure that the form has been submitted in order to be able to pay.
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
@@ -125,6 +133,7 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
         
     };
 
+    // Styles...
     const styles = {
       main: {
         backgroundColor: "#ffcab5",
