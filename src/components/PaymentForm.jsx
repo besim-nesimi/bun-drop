@@ -43,7 +43,7 @@ function PaymentForm({setPaymentFormSubmitted}) {
     if (cardNumber.trim() === "") {
       errors.cardNumber = "Card number is required.";
     } else if (!/^\d{16}$/.test(cardNumber)) {
-      errors.cardNumber = "Card number must be 16 digits.";
+      errors.cardNumber = "Card no. must be 16 numbers.";
     }
 
     if (cvv.trim() === "") {
