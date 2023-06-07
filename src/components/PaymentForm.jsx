@@ -7,26 +7,30 @@ function PaymentForm({setPaymentFormSubmitted}) {
   const [cardHolderName, setCardHolderName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [formErrors, setFormErrors] = useState({});
+  const [formApproved, setFormApporved] = useState({});
 
   const handlePaymentMethodChange = (event) => {
     setPaymentMethod(event.target.value);
   };
 
   const handleSubmit = (e) => {
+    const updatedFormApproved = {};
     e.preventDefault();
 
     if (paymentMethod === "card") {
       if (validateCardForm()) {
         console.log("Card Payment:", cardNumber, cvv, cardHolderName);
+        updatedFormApproved.paymentMethod = "Click 'Pay' to place your Bun-Drop order!"
         setPaymentFormSubmitted(true);
       }
     } else if (paymentMethod === "kwish") {
       if (validateSwishForm()) {
         console.log("Kwish Payment:", phoneNumber);
+        updatedFormApproved.paymentMethod = "Click 'Pay' to Kwish your Bun-Drop order!"
         setPaymentFormSubmitted(true);
       }
     }
-
+    setFormApporved(updatedFormApproved)
     setCardNumber("");
     setCVV("");
     setCardHolderName("");
@@ -56,6 +60,21 @@ function PaymentForm({setPaymentFormSubmitted}) {
 
     return Object.keys(errors).length === 0;
   };
+
+  const handleInputChange = (e) => {
+    const {name, value} = e.target;
+    setFormErrors((prevErrors) => ({...prevErrors, [name]: ""}))
+
+    if(name === "cardNumber") {
+      setCardNumber(value);
+    } else if (name === "cvv") {
+      setCVV(value)
+    } else if (name === "cardHolderName") {
+      setCardHolderName(value);
+    } else if (name === "phoneNumber") {
+      setPhoneNumber(value);
+    }
+  }
 
   const validateSwishForm = () => {
     if (phoneNumber.trim() === "" || phoneNumber.length !== 10 ) {
@@ -129,6 +148,10 @@ function PaymentForm({setPaymentFormSubmitted}) {
       borderRadius: 10,
       padding: 6,
     },
+    approved: {
+      display: "flex",
+      justifyContent: "center"
+    }
   };
 
   return (
@@ -176,8 +199,10 @@ function PaymentForm({setPaymentFormSubmitted}) {
                   <input
                     type="text"
                     value={cardNumber}
+                    name="cardNumber"
                     placeholder="1111 2222 3333 4444"
-                    onChange={(e) => setCardNumber(e.target.value)}
+                    // onChange={(e) => setCardNumber(e.target.value)}
+                    onChange={handleInputChange}
                     style={styles.inputStyle}
                   />
                 </label>
@@ -188,8 +213,10 @@ function PaymentForm({setPaymentFormSubmitted}) {
                   <input
                     type="text"
                     value={cvv}
+                    name="cvv"
                     placeholder="123"
-                    onChange={(e) => setCVV(e.target.value)}
+                    // onChange={(e) => setCVV(e.target.value)}
+                    onChange={handleInputChange}
                     style={styles.inputStyle}
                   />
                 </label>
@@ -200,12 +227,17 @@ function PaymentForm({setPaymentFormSubmitted}) {
                   <input
                     type="text"
                     value={cardHolderName}
+                    name="cardHolderName"
                     placeholder="John Atkins"
-                    onChange={(e) => setCardHolderName(e.target.value)}
+                    // onChange={(e) => setCardHolderName(e.target.value)}
+                    onChange={handleInputChange}
                     style={styles.inputStyle}
                   />
                 </label>
               </div>
+            </div>
+            <div style={styles.approved}>
+              {formApproved.paymentMethod && <div>{formApproved.paymentMethod}</div>}
             </div>
             <div style={styles.error}>
               <div>
@@ -238,18 +270,23 @@ function PaymentForm({setPaymentFormSubmitted}) {
                   <input
                     type="text"
                     value={phoneNumber}
+                    name="phoneNumber"
                     placeholder="0701234567"
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    // onChange={(e) => setPhoneNumber(e.target.value)}
+                    onChange={handleInputChange}
                     style={styles.inputStyle}
                   />
                 </label>
               </div>
             </div>
+            <div>
+              {formApproved.paymentMethod && <div>{formApproved.paymentMethod}</div>}
+            </div>
             <div style={styles.error}>
               {formErrors.phoneNumber && <div>{formErrors.phoneNumber}</div>}
             </div>
             <div style={styles.center}>
-              <button type="submit">Submit</button>
+              <button type="submit">Enter</button>
             </div>
           </form>
         </div>

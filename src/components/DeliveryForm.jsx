@@ -201,7 +201,7 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
               </div>
             </div>
             <div style={styles.btnCard}>
-              <button type="submit">Submit</button>
+              <button type="submit">Save Details</button>
             </div>
           </form>
         </div>

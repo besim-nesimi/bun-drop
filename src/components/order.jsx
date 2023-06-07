@@ -5,10 +5,14 @@ function Order() {
 
     // Customer details from previous page
     const [customerDetails, setCostumerDetails] = useState(null);
+    const [orderData, setOrderData] = useState([]);
 
     useEffect(() => {
         const storedCustomerDetails = JSON.parse(localStorage.getItem("customerDetails"));
         setCostumerDetails(storedCustomerDetails);
+
+        const storedOrderData = JSON.parse(localStorage.getItem("orderData"));
+        setOrderData(storedOrderData);
     }, [])
 
     const logo = require("../images/logo-black.png");
@@ -54,6 +58,50 @@ function Order() {
         justifyContent: "space-between",
         padding: 5,
         marginLeft: 10,
+      },
+      foodPic: {
+        width: 100,
+        height: 100,
+        margin: 10,
+        padding: 5,
+      },
+      center: {
+        display: "flex",
+        justifyContent: "center"
+      },
+      block: {
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gridAutoRows: "1fr",
+        justifyContent: "center",
+        justifyItems: "center",
+        alignItems: "center",
+        gap: 15,
+        backgroundColor: "white",
+        padding: 10,
+        margin: 10,
+        borderRadius: 10,
+      },
+      title: {
+        borderBottom: "1px solid red"
+      },
+      orderBlock: {
+        display: "grid",
+        gridTemplateColumns: "repeat(1, 1fr)",
+        gridAutoRows: "1fr",
+        justifyContent: "center",
+        justifyItems: "center",
+        alignItems: "center",
+        gap: 15,
+        backgroundColor: "white",
+        padding: 10,
+        margin: 10,
+        borderRadius: 10,
+      },
+      customerName: {
+        borderBottom: "1px solid red",
+        paddingBottom: 5,
+        marginBottom: 5,
       }
     };
 
@@ -69,27 +117,40 @@ function Order() {
         </div>
         <div style={styles.footer}>
           <div style={styles.container}>
-            <h1>
+            <h1 style={styles.title}>
               <div>{generateRandomTime()} minutes to delivery.</div>
             </h1>
           </div>
-          <div style={styles.container}>
+          <div>
             <div>
-              <h1>Delivery Details</h1>
               <div>
+              <div style={styles.center}>
+                <h1 style={styles.title}>Delivery Details</h1>
+              </div>
+              <div style={styles.container}>
                 {customerDetails && (
-                  <div>
-                    <p>Customer Name: {customerDetails.customerName}</p>
-                    <p>Street Address: {customerDetails.streetAddress}</p>
-                    <p>Street Number: {customerDetails.streetNumber}</p>
-                    <p>City: {customerDetails.city}</p>
-                    <p>Zip Code: {customerDetails.zipCode}</p>
-                    <p>Phone Number: {customerDetails.phoneNumber}</p>
+                  <div style={styles.orderBlock}>
+                    <div><p style={styles.customerName}>{customerDetails.customerName}</p>{customerDetails.streetAddress} {customerDetails.streetNumber} {customerDetails.zipCode} {customerDetails.city}</div>
                   </div>
                 )}
               </div>
+              </div>
               <div>
-                <h1>Order Details</h1>
+                <div style={styles.center}>
+                  <h1 style={styles.title}>Order Details</h1>
+                </div>
+                <div style={styles.container}>
+                  {orderData && (
+                  <div>
+                    {orderData.map((item) => (
+                    <div key={item.id} style={styles.block}>
+                      <p>{item.name}</p>
+                      <p>Amount: {item.amount} pieces</p>
+                      <img style={styles.foodPic} src={item.image} alt="test" />
+                    </div>
+                    ))}
+                  </div>)}
+                </div>
               </div>
             </div>
           </div>

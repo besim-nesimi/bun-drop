@@ -27,6 +27,10 @@ function Payment() {
         return totalPrice.toFixed(2);
     }
 
+    const handlePay = () => {
+        localStorage.setItem("orderData", JSON.stringify(orderData))
+    };
+
     // Set new order data to send with localstorage over to payment
     // Validate inputs in PaymentForm & DeliveryForm in order to press Pay and handleSubmit
 
@@ -118,7 +122,7 @@ function Payment() {
             </div>}
         </div>
         <div style={styles.container}>
-            <Link to="/order">
+            <Link to="/order" onClick={handlePay}>
                 <button disabled={!isPaymentFormSubmitted || !isDeliveryFormSubmitted} style={styles.payBtn}>Pay</button>
             </Link>
         </div>
