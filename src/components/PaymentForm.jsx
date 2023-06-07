@@ -58,7 +58,7 @@ function PaymentForm({setPaymentFormSubmitted}) {
   };
 
   const validateSwishForm = () => {
-    if (phoneNumber.trim() === "" || phoneNumber.length < 10) {
+    if (phoneNumber.trim() === "" || phoneNumber.length !== 10 ) {
       const errors = {};
 
       if (phoneNumber.trim() === "") {

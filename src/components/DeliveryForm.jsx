@@ -53,26 +53,19 @@ function DeliveryForm({setDeliveryFormSubmitted}) {
             setDeliveryFormSubmitted(true);
 
             // Resetta formuläret
-            setFormData({
-                customerName: "",
-                streetAddress: "",
-                streetNumber: "",
-                city: "",
-                zipCode: "",
-                phoneNumber: "",
-            });
+            // Jag gör ett medvetet val att inte resetta formuläret.
+            // Om kund gjort fel, kan dem skriva om det fält som blivit fel och klicka submit på nytt.
+            // setFormData({
+            //     customerName: "",
+            //     streetAddress: "",
+            //     streetNumber: "",
+            //     city: "",
+            //     zipCode: "",
+            //     phoneNumber: "",
+            // });
 
             
         }
-
-        setFormData({
-            customerName: "",
-            streetAddress: "",
-            streetNumber: "",
-            city: "",
-            zipCode: "",
-            phoneNumber: "",
-        });
 
         
     };
