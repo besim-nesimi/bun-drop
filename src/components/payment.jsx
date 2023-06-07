@@ -24,6 +24,9 @@ function Payment() {
         return totalPrice.toFixed(2);
     }
 
+    // Set new order data to send with localstorage over to payment
+    // Validate inputs in PaymentForm & DeliveryForm in order to press Pay and handleSubmit
+
     const logo = require("../images/logo-black.png")
 
 

@@ -11,6 +11,9 @@ function Order() {
         setCostumerDetails(storedCustomerDetails);
     }, [])
 
+    const logo = require("../images/logo-black.png");
+
+
     // Problemet med nedan är att varje gång sidan uppdateras blir det nya siffror
     // Kanske spara time som en ny variabel och displaya bara den variabeln?
     // Blir samma "bug" men att det blir med +1 såklart :D
@@ -27,27 +30,71 @@ function Order() {
         return time;
     }
 
+    const styles = {
+      main: {
+        backgroundColor: "#78aafa",
+        width: "100%",
+        height: "100%",
+      },
+      homeLogo: {
+        width: 300,
+        height: 300,
+      },
+      footer: {
+        backgroundColor: "#ffcab5",
+      },
+      container: {
+        display: "flex",
+        justifyContent: "center",
+        padding: 5,
+        margin: 5,
+      },
+      card: {
+        display: "flex",
+        justifyContent: "space-between",
+        padding: 5,
+        marginLeft: 10,
+      }
+    };
+
     // Some random "thank you for bun-dropping a meal or whatever"
     // STYLE
 
 
 
     return (
-    <div>
-        <h1>Confirmation site</h1>
-            {customerDetails && (
+      <div style={styles.main}>
+        <div style={styles.container}>
+          <img src={logo} alt="" style={styles.homeLogo} />
+        </div>
+        <div style={styles.footer}>
+          <div style={styles.container}>
+            <h1>
+              <div>{generateRandomTime()} minutes to delivery.</div>
+            </h1>
+          </div>
+          <div style={styles.container}>
             <div>
-                <p>Customer Name: {customerDetails.customerName}</p>
-                <p>Street Address: {customerDetails.streetAddress}</p>
-                <p>Street Number: {customerDetails.streetNumber}</p>
-                <p>City: {customerDetails.city}</p>
-                <p>Zip Code: {customerDetails.zipCode}</p>
-                <p>Phone Number: {customerDetails.phoneNumber}</p>
+              <h1>Delivery Details</h1>
+              <div>
+                {customerDetails && (
+                  <div>
+                    <p>Customer Name: {customerDetails.customerName}</p>
+                    <p>Street Address: {customerDetails.streetAddress}</p>
+                    <p>Street Number: {customerDetails.streetNumber}</p>
+                    <p>City: {customerDetails.city}</p>
+                    <p>Zip Code: {customerDetails.zipCode}</p>
+                    <p>Phone Number: {customerDetails.phoneNumber}</p>
+                  </div>
+                )}
+              </div>
+              <div>
+                <h1>Order Details</h1>
+              </div>
             </div>
-            )}
-        <h1>Detailed list of items bought below</h1>
-        <h1><div>{generateRandomTime()} minutes to delivery.</div></h1>
-    </div>
+          </div>
+        </div>
+      </div>
     );
 }
 

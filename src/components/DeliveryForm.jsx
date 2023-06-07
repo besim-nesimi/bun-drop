@@ -63,88 +63,141 @@ function DeliveryForm() {
     };
 
     const styles = {
-        container: {
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            padding: 10,
-            marginBottom: 10,
-        },
-    }
+      main: {
+        backgroundColor: "#ffcab5",
+      },
+      container: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: 10,
+        marginBottom: 10,
+      },
+      formContainer: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        marginBottom: 2,
+      },
+      card: {
+        backgroundColor: "white",
+        color: "black",
+        margin: 5,
+        padding: 5,
+        borderRadius: 5,
+      },
+      btnCard: {
+        backgroundColor: "white",
+        color: "black",
+        margin: 5,
+        padding: 5,
+        borderRadius: 5,
+        display: "flex",
+        justifyContent: "center",
+      }
+    };
     return (
-        <div>
-            <form onSubmit={handleSubmit} style={styles.container}>
-                <div>
-                    <label>
-                        Customer Name: <input 
-                        type="text"
-                        name="customerName"
-                        value={formData.customerName}
-                        onChange={handleInputChange}
-                        />
-                    </label>
-                    {formErrors.customerName && <span>{formErrors.customerName}</span>}
-                </div>
-                <div>
-                    <label>
-                        Street Address: <input 
-                        type="text"
-                        name="streetAddress"
-                        value={formData.streetAddress}
-                        onChange={handleInputChange}
-                        />
-                    </label>
-                    {formErrors.streetAddress && <span>{formErrors.streetAddress}</span>}
-                </div>
-                <div>
-                    <label>
-                        Street Number: <input 
-                        type="text"
-                        name="streetNumber"
-                        value={formData.streetNumber}
-                        onChange={handleInputChange}
-                        />
-                    </label>
-                    {formErrors.streetNumber && <span>{formErrors.streetNumber}</span>}
-                </div>
-                <div>
-                    <label>
-                        City: <input
-                        type="text"
-                        name='city'
-                        value={formData.city}
-                        onChange={handleInputChange}
-                        />
-                    </label>
-                    {formErrors.city && <span>{formErrors.city}</span>}
-                </div>
-                <div>
+      <div style={styles.main}>
+        <div style={styles.container}>
+          <form onSubmit={handleSubmit}>
+            <div style={styles.card}>
+              <div style={styles.formContainer}>
+                <label style={styles.formContainer}>
+                  Customer Name:{" "}
+                  <input
+                    type="text"
+                    name="customerName"
+                    value={formData.customerName}
+                    onChange={handleInputChange}
+                  />
+                </label>
+                {formErrors.customerName && (
+                  <span>{formErrors.customerName}</span>
+                )}
+              </div>
+            </div>
+            <div style={styles.card}>
+              <div style={styles.formContainer}>
+                <label style={styles.formContainer}>
+                  Street Address:{" "}
+                  <input
+                    type="text"
+                    name="streetAddress"
+                    value={formData.streetAddress}
+                    onChange={handleInputChange}
+                  />
+                </label>
+                {formErrors.streetAddress && (
+                  <span>{formErrors.streetAddress}</span>
+                )}
+              </div>
+            </div>
+            <div style={styles.card}>
+              <div style={styles.formContainer}>
+                <label style={styles.formContainer}>
+                  Street Number:{" "}
+                  <input
+                    type="text"
+                    name="streetNumber"
+                    value={formData.streetNumber}
+                    onChange={handleInputChange}
+                  />
+                </label>
+                {formErrors.streetNumber && (
+                  <span>{formErrors.streetNumber}</span>
+                )}
+              </div>
+            </div>
+            <div style={styles.card}>
+              <div style={styles.formContainer}>
+                <label style={styles.formContainer}>
+                  City:{" "}
+                  <input
+                    type="text"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleInputChange}
+                  />
+                </label>
+                {formErrors.city && <span>{formErrors.city}</span>}
+              </div>
+            </div>
+            <div style={styles.card}>
+              <div style={styles.formContainer}>
+                <label style={styles.formContainer}>
+                  Zip Code:{" "}
+                  <input
+                    type="text"
+                    name="zipCode"
+                    value={formData.zipCode}
+                    onChange={handleInputChange}
+                  />
+                </label>
+                {formErrors.zipCode && <span>{formErrors.zipCode}</span>}
+              </div>
+            </div>
+            <div style={styles.card}>
+              <div style={styles.formContainer}>
                 <label>
-                        Zip Code: <input
-                        type="text"
-                        name='zipCode'
-                        value={formData.zipCode}
-                        onChange={handleInputChange}
-                        />
-                    </label>
-                    {formErrors.zipCode && <span>{formErrors.zipCode}</span>}
-                </div>
-                <div>
-                <label>
-                        Phone Number: <input
-                        type="text"
-                        name='phoneNumber'
-                        value={formData.phoneNumber}
-                        onChange={handleInputChange}
-                        />
-                    </label>
-                    {formErrors.phoneNumber && <span>{formErrors.phoneNumber}</span>}
-                </div>
-                <div>
-                    <button type='submit'>Submit</button>
-                </div>
-            </form>
+                  Phone Number:{" "}
+                  <input
+                    type="text"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
+                  />
+                </label>
+                {formErrors.phoneNumber && (
+                  <span>{formErrors.phoneNumber}</span>
+                )}
+              </div>
+            </div>
+            <div style={styles.btnCard}>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
         </div>
+      </div>
     );
 }
 
