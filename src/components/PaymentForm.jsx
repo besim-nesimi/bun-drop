@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-function PaymentForm() {
+function PaymentForm(setPaymentFormSubmitted) {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [cvv, setCVV] = useState("");
   const [cardHolderName, setCardHolderName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [formErrors, setFormErrors] = useState({});
+  const [isPaymentFormSubmitted, setPaymentFormSubmitted] = useState(false);
 
   const handlePaymentMethodChange = (event) => {
     setPaymentMethod(event.target.value);
@@ -18,10 +19,12 @@ function PaymentForm() {
     if (paymentMethod === "card") {
       if (validateCardForm()) {
         console.log("Card Payment:", cardNumber, cvv, cardHolderName);
+        setPaymentFormSubmitted(true);
       }
     } else if (paymentMethod === "kwish") {
       if (validateSwishForm()) {
         console.log("Kwish Payment:", phoneNumber);
+        setPaymentFormSubmitted(true);
       }
     }
 

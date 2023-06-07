@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 // För enkelhetens skull, testar med att bara lägga allt som text, även siffror
 
-function DeliveryForm() {
+function DeliveryForm({setDeliveryFormSubmitted}) {
     const [formData, setFormData] = useState({
         customerName: "",
         streetAddress: "",
