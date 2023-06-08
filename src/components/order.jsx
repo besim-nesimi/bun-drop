@@ -120,6 +120,9 @@ function Order() {
           <img src={logo} alt="" style={styles.homeLogo} />
         </div>
         <div style={styles.footer}>
+          <div style={styles.center}>
+            <h1>Thank you for your Bun Drop Order!</h1>
+          </div>
           <div style={styles.container}>
             <h1 style={styles.title}>
               <div>{generateRandomTime()} minutes to delivery.</div>
